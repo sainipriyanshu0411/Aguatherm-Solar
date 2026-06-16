@@ -134,4 +134,22 @@ billRange.addEventListener(
 
 updateCalculator();
 
+document.querySelectorAll('#navbarNav .nav-link').forEach(link => {
+
+    link.addEventListener('click', function () {
+
+        const navbarCollapse =
+            document.getElementById('navbarNav');
+
+        const collapseInstance =
+            bootstrap.Collapse.getOrCreateInstance(
+                navbarCollapse
+            );
+
+        collapseInstance.hide();
+
+    });
+
+});
+
 
